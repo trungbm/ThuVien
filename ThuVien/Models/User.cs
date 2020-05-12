@@ -26,5 +26,11 @@ namespace ThuVien.Models
 
         [StringLength(100)]
         public string Password { get; set; }
+
+        [NotMapped]
+        [Required]
+        [System.ComponentModel.DataAnnotations.Compare("Password")]
+        public string ConfirmPassword { get; set; }
+
     }
 }
